@@ -160,11 +160,7 @@ int main(void)
     {
        __WFE();
     }
-                serial_initialize();
-
-   
-   
-       
+    
     while (true)
     {
         char c;
@@ -183,8 +179,6 @@ int main(void)
             serial_uninitialize();
         }
         
-        /*
-        
         memset(m_rx_buf, 0, m_length);
         memset(m_tx_buf, 0, m_length);
         m_tx_buf[0] = 0x0B;
@@ -195,11 +189,7 @@ int main(void)
         m_tx_buf[5] = 0x00;
         m_tx_buf[6] = 0x00;
         m_tx_buf[7] = 0x00;
-        
-        
-        
-        
-        
+
         spi_xfer_done = false;
         APP_ERROR_CHECK(nrf_drv_spi_transfer(&spi_adxl, m_tx_buf, 8, m_rx_buf, 8));
         nrf_delay_ms(9.2);
@@ -209,21 +199,6 @@ int main(void)
             __WFE();
         }
         
-        */
-       
-        memset(m_rx_buf, 0, m_length);
-        memset(m_tx_buf, 0, m_length);
-        m_tx_buf[0] = 0x9F;
-       
-        spi_xfer_done = false;
-        APP_ERROR_CHECK(nrf_drv_spi_transfer(&spi_flash, m_tx_buf, 1, m_rx_buf, 3));
-        nrf_delay_ms(9.2);
-
-        while (!spi_xfer_done)
-        {
-            __WFE();
-        }
-       
      
         (void)nrf_serial_write(&serial_uart, &c, sizeof(c), NULL, 0);
         (void)nrf_serial_write(&serial_uart, &m_rx_buf[0], (sizeof(m_rx_buf)), NULL, 0);
