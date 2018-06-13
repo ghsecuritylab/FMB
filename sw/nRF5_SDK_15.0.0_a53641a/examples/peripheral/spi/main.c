@@ -1,6 +1,6 @@
 /**
- * FMB Flash
- * Revision 2
+ * FMB ADXL Logic Analyzer
+ * Revision 1
  * 06/12/2018
  * 
  * THIS SOFTWARE IS PROVIDED BY NORDIC SEMICONDUCTOR ASA "AS IS" AND ANY EXPRESS
@@ -37,14 +37,11 @@
 #include "nrf_log_ctrl.h"
 #include "nrf_log_default_backends.h"
 
-#define SPI0_INSTANCE  0 /**< SPI 0 instance index. */
-static const nrf_drv_spi_t spi_flash = NRF_DRV_SPI_INSTANCE(SPI0_INSTANCE);  /**< SPI 0  instance. */
-#define SPI1_INSTANCE  1 /**< SPI 1 instance index. */
+#define SPI1_INSTANCE  0 /**< SPI 1 instance index. */
 static const nrf_drv_spi_t spi_adxl = NRF_DRV_SPI_INSTANCE(SPI1_INSTANCE);  /**< SPI 1 instance. */
 
 static volatile bool spi_xfer_done;  /**< Flag used to indicate that SPI instance completed the transfer. */
 
-#define TEST_STRING "Nordic"
 static uint8_t       m_tx_buf[8];           /**< TX buffer. */
 static uint8_t       m_rx_buf[8];    /**< RX buffer. */
 static const uint8_t m_length = sizeof(m_tx_buf);        /**< Transfer length. */
@@ -74,7 +71,7 @@ static void sleep_handler(void)
 }
 
 NRF_SERIAL_DRV_UART_CONFIG_DEF(m_uart0_drv_config,
-                      6, 12,
+                      26, 27,
                       RTS_PIN_NUMBER, CTS_PIN_NUMBER,
                       NRF_UART_HWFC_DISABLED, NRF_UART_PARITY_EXCLUDED,
                       NRF_UART_BAUDRATE_115200,
@@ -98,27 +95,15 @@ NRF_SERIAL_CONFIG_DEF(serial_config, NRF_SERIAL_MODE_IRQ,
 NRF_SERIAL_UART_DEF(serial_uart, 0);
 
 
-// application specific config
-
 void serial_initialize();
 void serial_uninitialize();
 
 
-//#define ADXLPOWER 8
-#define FLASHPOWER 19
+
 
 
 int main(void)
 {
-  //  nrf_gpio_cfg_output(ADXLPOWER);
-  //  nrf_gpio_pin_set(ADXLPOWER);
-    
-    nrf_gpio_cfg_output(FLASHPOWER);
-    nrf_gpio_pin_set(FLASHPOWER);
-    
-    
-    nrf_delay_ms(1000);
-
     ret = nrf_drv_clock_init();
     APP_ERROR_CHECK(ret);
     ret = nrf_drv_power_init(NULL);
@@ -128,18 +113,7 @@ int main(void)
     ret = app_timer_init();
     APP_ERROR_CHECK(ret);
     
-    #define SERIAL_CRTL 26
-    bool state = false;
-    nrf_gpio_cfg_input(SERIAL_CRTL, NRF_GPIO_PIN_PULLDOWN);
-
-    nrf_drv_spi_config_t spi_config_flash = NRF_DRV_SPI_DEFAULT_CONFIG;
-    spi_config_flash.ss_pin   = 20;
-    spi_config_flash.miso_pin = 27;
-    spi_config_flash.mosi_pin = 24;
-    spi_config_flash.sck_pin  = 23;
-    
-    APP_ERROR_CHECK(nrf_drv_spi_init(&spi_flash, &spi_config_flash, spi_event_handler, NULL));
-
+    serial_initialize();
     
     nrf_drv_spi_config_t spi_config_adxl = NRF_DRV_SPI_DEFAULT_CONFIG;
     spi_config_adxl.ss_pin   = SPI_SS_PIN;
@@ -161,24 +135,12 @@ int main(void)
        __WFE();
     }
     
+    uint8_t newline[2];
+    newline[0] = 0x0D;
+    newline[1] = 0x0A;
+    
     while (true)
     {
-        char c;
-        state = nrf_gpio_pin_read(SERIAL_CRTL);
-        if(state){
-            serial_initialize();
-        }
-        ret = nrf_serial_read(&serial_uart, &c, sizeof(c), NULL, 1000);
-        if (ret != NRF_SUCCESS)
-        {
-            continue;
-        }
-       
-    
-        if(c == 'u'){ 
-            serial_uninitialize();
-        }
-        
         memset(m_rx_buf, 0, m_length);
         memset(m_tx_buf, 0, m_length);
         m_tx_buf[0] = 0x0B;
@@ -192,17 +154,18 @@ int main(void)
 
         spi_xfer_done = false;
         APP_ERROR_CHECK(nrf_drv_spi_transfer(&spi_adxl, m_tx_buf, 8, m_rx_buf, 8));
-        nrf_delay_ms(9.2);
+        nrf_delay_ms(1000);
 
         while (!spi_xfer_done)
         {
             __WFE();
-        }
+        }     
         
-     
-        (void)nrf_serial_write(&serial_uart, &c, sizeof(c), NULL, 0);
         (void)nrf_serial_write(&serial_uart, &m_rx_buf[0], (sizeof(m_rx_buf)), NULL, 0);
+        (void)nrf_serial_write(&serial_uart, &newline[0], (sizeof(newline)), NULL, 0);
         (void)nrf_serial_flush(&serial_uart, 0);
+        
+        
          
     }
 }
@@ -220,17 +183,4 @@ void serial_initialize(){
                            NULL,
                            NRF_SERIAL_MAX_TIMEOUT);
     APP_ERROR_CHECK(ret);
-}
-
-void serial_uninitialize(){
-    static char serial_uninit_log[] = "Serial Uninitialized\n\r";
-    ret = nrf_serial_write(&serial_uart,
-                           serial_uninit_log,
-                           strlen(serial_uninit_log),
-                           NULL,
-                           NRF_SERIAL_MAX_TIMEOUT);
-          
-    APP_ERROR_CHECK(ret);       
-    nrf_delay_ms(2000);
-    nrf_serial_uninit(&serial_uart);
 }
