@@ -15,6 +15,17 @@
  * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * 
  */
+#include <stdint.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include "nrf.h"
+#include "nrf_drv_clock.h"
+#include "nrf_drv_power.h"
+#include "nrf_serial.h"
+#include "app_timer.h"
+#include "app_error.h"
+#include "app_util.h"
+
 #include "nrf_drv_spi.h"
 #include "app_util_platform.h"
 #include "nrf_gpio.h"
@@ -26,14 +37,21 @@
 #include "nrf_log_ctrl.h"
 #include "nrf_log_default_backends.h"
 
-#define SPI_INSTANCE  0 /**< SPI instance index. */
-static const nrf_drv_spi_t spi = NRF_DRV_SPI_INSTANCE(SPI_INSTANCE);  /**< SPI instance. */
+#define SPI0_INSTANCE  0 /**< SPI 0 instance index. */
+static const nrf_drv_spi_t spi_flash = NRF_DRV_SPI_INSTANCE(SPI0_INSTANCE);  /**< SPI 0  instance. */
+#define SPI1_INSTANCE  1 /**< SPI 1 instance index. */
+static const nrf_drv_spi_t spi_adxl = NRF_DRV_SPI_INSTANCE(SPI1_INSTANCE);  /**< SPI 1 instance. */
+
 static volatile bool spi_xfer_done;  /**< Flag used to indicate that SPI instance completed the transfer. */
 
 #define TEST_STRING "Nordic"
-static uint8_t       m_tx_buf[] = TEST_STRING;           /**< TX buffer. */
-static uint8_t       m_rx_buf[sizeof(TEST_STRING) + 1];    /**< RX buffer. */
+static uint8_t       m_tx_buf[8];           /**< TX buffer. */
+static uint8_t       m_rx_buf[8];    /**< RX buffer. */
 static const uint8_t m_length = sizeof(m_tx_buf);        /**< Transfer length. */
+
+
+ret_code_t ret;
+
 
 /**
  * @brief SPI user event handler.
@@ -43,46 +61,201 @@ void spi_event_handler(nrf_drv_spi_evt_t const * p_event,
                        void *                    p_context)
 {
     spi_xfer_done = true;
-    NRF_LOG_INFO("Transfer completed.");
-    if (m_rx_buf[0] != 0)
-    {
-        NRF_LOG_INFO(" Received:");
-        NRF_LOG_HEXDUMP_INFO(m_rx_buf, strlen((const char *)m_rx_buf));
-    }
 }
+
+#define OP_QUEUES_SIZE          3
+#define APP_TIMER_PRESCALER     NRF_SERIAL_APP_TIMER_PRESCALER
+
+static void sleep_handler(void)
+{
+    __WFE();
+    __SEV();
+    __WFE();
+}
+
+NRF_SERIAL_DRV_UART_CONFIG_DEF(m_uart0_drv_config,
+                      6, 12,
+                      RTS_PIN_NUMBER, CTS_PIN_NUMBER,
+                      NRF_UART_HWFC_DISABLED, NRF_UART_PARITY_EXCLUDED,
+                      NRF_UART_BAUDRATE_115200,
+                      UART_DEFAULT_CONFIG_IRQ_PRIORITY);
+
+#define SERIAL_FIFO_TX_SIZE 32
+#define SERIAL_FIFO_RX_SIZE 32
+
+NRF_SERIAL_QUEUES_DEF(serial_queues, SERIAL_FIFO_TX_SIZE, SERIAL_FIFO_RX_SIZE);
+
+
+#define SERIAL_BUFF_TX_SIZE 1
+#define SERIAL_BUFF_RX_SIZE 1
+
+NRF_SERIAL_BUFFERS_DEF(serial_buffs, SERIAL_BUFF_TX_SIZE, SERIAL_BUFF_RX_SIZE);
+
+NRF_SERIAL_CONFIG_DEF(serial_config, NRF_SERIAL_MODE_IRQ,
+                      &serial_queues, &serial_buffs, NULL, sleep_handler);
+
+
+NRF_SERIAL_UART_DEF(serial_uart, 0);
+
+
+// application specific config
+
+void serial_initialize();
+void serial_uninitialize();
+
+
+//#define ADXLPOWER 8
+#define FLASHPOWER 19
+
 
 int main(void)
 {
-    bsp_board_init(BSP_INIT_LEDS);
+  //  nrf_gpio_cfg_output(ADXLPOWER);
+  //  nrf_gpio_pin_set(ADXLPOWER);
+    
+    nrf_gpio_cfg_output(FLASHPOWER);
+    nrf_gpio_pin_set(FLASHPOWER);
+    
+    
+    nrf_delay_ms(1000);
 
-    APP_ERROR_CHECK(NRF_LOG_INIT(NULL));
-    NRF_LOG_DEFAULT_BACKENDS_INIT();
+    ret = nrf_drv_clock_init();
+    APP_ERROR_CHECK(ret);
+    ret = nrf_drv_power_init(NULL);
+    APP_ERROR_CHECK(ret);
 
-    nrf_drv_spi_config_t spi_config = NRF_DRV_SPI_DEFAULT_CONFIG;
-    spi_config.ss_pin   = SPI_SS_PIN;
-    spi_config.miso_pin = SPI_MISO_PIN;
-    spi_config.mosi_pin = SPI_MOSI_PIN;
-    spi_config.sck_pin  = SPI_SCK_PIN;
-    APP_ERROR_CHECK(nrf_drv_spi_init(&spi, &spi_config, spi_event_handler, NULL));
+    nrf_drv_clock_lfclk_request(NULL);
+    ret = app_timer_init();
+    APP_ERROR_CHECK(ret);
+    
+    #define SERIAL_CRTL 26
+    bool state = false;
+    nrf_gpio_cfg_input(SERIAL_CRTL, NRF_GPIO_PIN_PULLDOWN);
 
-    NRF_LOG_INFO("SPI example started.");
+    nrf_drv_spi_config_t spi_config_flash = NRF_DRV_SPI_DEFAULT_CONFIG;
+    spi_config_flash.ss_pin   = 20;
+    spi_config_flash.miso_pin = 27;
+    spi_config_flash.mosi_pin = 24;
+    spi_config_flash.sck_pin  = 23;
+    
+    APP_ERROR_CHECK(nrf_drv_spi_init(&spi_flash, &spi_config_flash, spi_event_handler, NULL));
 
-    while (1)
+    
+    nrf_drv_spi_config_t spi_config_adxl = NRF_DRV_SPI_DEFAULT_CONFIG;
+    spi_config_adxl.ss_pin   = SPI_SS_PIN;
+    spi_config_adxl.miso_pin = SPI_MISO_PIN;
+    spi_config_adxl.mosi_pin = SPI_MOSI_PIN;
+    spi_config_adxl.sck_pin  = SPI_SCK_PIN;
+    
+    APP_ERROR_CHECK(nrf_drv_spi_init(&spi_adxl, &spi_config_adxl, spi_event_handler, NULL));
+    
+    uint8_t powerctl[3];
+    powerctl[0] = 0x0A;
+    powerctl[1] = 0x2D;
+    powerctl[2] = 0x02; 
+    nrf_drv_spi_transfer(&spi_adxl, powerctl, 3, m_rx_buf, 3);
+    nrf_delay_ms(50);
+   
+    while (!spi_xfer_done)
     {
-        // Reset rx buffer and transfer done flag
-        memset(m_rx_buf, 0, m_length);
-        spi_xfer_done = false;
+       __WFE();
+    }
+                serial_initialize();
 
-        APP_ERROR_CHECK(nrf_drv_spi_transfer(&spi, m_tx_buf, m_length, m_rx_buf, m_length));
+   
+   
+       
+    while (true)
+    {
+        char c;
+        state = nrf_gpio_pin_read(SERIAL_CRTL);
+        if(state){
+            serial_initialize();
+        }
+        ret = nrf_serial_read(&serial_uart, &c, sizeof(c), NULL, 1000);
+        if (ret != NRF_SUCCESS)
+        {
+            continue;
+        }
+       
+    
+        if(c == 'u'){ 
+            serial_uninitialize();
+        }
+        
+        /*
+        
+        memset(m_rx_buf, 0, m_length);
+        memset(m_tx_buf, 0, m_length);
+        m_tx_buf[0] = 0x0B;
+        m_tx_buf[1] = 0x0E;
+        m_tx_buf[2] = 0x00;
+        m_tx_buf[3] = 0x00;
+        m_tx_buf[4] = 0x00;
+        m_tx_buf[5] = 0x00;
+        m_tx_buf[6] = 0x00;
+        m_tx_buf[7] = 0x00;
+        
+        
+        
+        
+        
+        spi_xfer_done = false;
+        APP_ERROR_CHECK(nrf_drv_spi_transfer(&spi_adxl, m_tx_buf, 8, m_rx_buf, 8));
+        nrf_delay_ms(9.2);
 
         while (!spi_xfer_done)
         {
             __WFE();
         }
+        
+        */
+       
+        memset(m_rx_buf, 0, m_length);
+        memset(m_tx_buf, 0, m_length);
+        m_tx_buf[0] = 0x9F;
+       
+        spi_xfer_done = false;
+        APP_ERROR_CHECK(nrf_drv_spi_transfer(&spi_flash, m_tx_buf, 1, m_rx_buf, 3));
+        nrf_delay_ms(9.2);
 
-        NRF_LOG_FLUSH();
-
-        bsp_board_led_invert(BSP_BOARD_LED_0);
-        nrf_delay_ms(200);
+        while (!spi_xfer_done)
+        {
+            __WFE();
+        }
+       
+     
+        (void)nrf_serial_write(&serial_uart, &c, sizeof(c), NULL, 0);
+        (void)nrf_serial_write(&serial_uart, &m_rx_buf[0], (sizeof(m_rx_buf)), NULL, 0);
+        (void)nrf_serial_flush(&serial_uart, 0);
+         
     }
+}
+
+void serial_initialize(){
+    ret = nrf_serial_init(&serial_uart, &m_uart0_drv_config, &serial_config);
+    APP_ERROR_CHECK(ret);
+    nrf_delay_ms(2000);
+         
+    static char serial_init_log[] = "Serial Initialized\n\r";
+
+    ret = nrf_serial_write(&serial_uart,
+                           serial_init_log,
+                           strlen(serial_init_log),
+                           NULL,
+                           NRF_SERIAL_MAX_TIMEOUT);
+    APP_ERROR_CHECK(ret);
+}
+
+void serial_uninitialize(){
+    static char serial_uninit_log[] = "Serial Uninitialized\n\r";
+    ret = nrf_serial_write(&serial_uart,
+                           serial_uninit_log,
+                           strlen(serial_uninit_log),
+                           NULL,
+                           NRF_SERIAL_MAX_TIMEOUT);
+          
+    APP_ERROR_CHECK(ret);       
+    nrf_delay_ms(2000);
+    nrf_serial_uninit(&serial_uart);
 }

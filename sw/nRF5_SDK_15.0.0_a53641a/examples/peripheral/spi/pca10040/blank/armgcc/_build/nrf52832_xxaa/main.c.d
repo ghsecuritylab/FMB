@@ -1,8 +1,4 @@
 _build/nrf52832_xxaa/main.c.o: ../../../main.c \
- ../../../../../../integration/nrfx/legacy/nrf_drv_spi.h \
- ../../../../../../modules/nrfx/nrfx.h \
- ../../../../../../integration/nrfx/nrfx_config.h ../config/sdk_config.h \
- ../../../../../../modules/nrfx/drivers/nrfx_common.h \
  /usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include/stdint.h \
  /usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/stdint.h \
  /usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine/_default_types.h \
@@ -10,8 +6,8 @@ _build/nrf52832_xxaa/main.c.o: ../../../main.c \
  /usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/_newlib_version.h \
  /usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_intsup.h \
  /usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_stdint.h \
- /usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include/stddef.h \
  /usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include/stdbool.h \
+ /usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include/stddef.h \
  ../../../../../../modules/nrfx/mdk/nrf.h \
  ../../../../../../modules/nrfx/mdk/nrf52.h \
  ../../../../../../components/toolchain/cmsis/include/core_cm4.h \
@@ -24,6 +20,11 @@ _build/nrf52832_xxaa/main.c.o: ../../../main.c \
  ../../../../../../modules/nrfx/mdk/nrf51_to_nrf52.h \
  ../../../../../../modules/nrfx/mdk/nrf52_name_change.h \
  ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
+ ../../../../../../integration/nrfx/legacy/nrf_drv_clock.h \
+ ../../../../../../modules/nrfx/drivers/include/nrfx_clock.h \
+ ../../../../../../modules/nrfx/nrfx.h \
+ ../../../../../../integration/nrfx/nrfx_config.h ../config/sdk_config.h \
+ ../../../../../../modules/nrfx/drivers/nrfx_common.h \
  ../../../../../../modules/nrfx/mdk/nrf_peripherals.h \
  ../../../../../../modules/nrfx/mdk/nrf52832_peripherals.h \
  ../../../../../../integration/nrfx/nrfx_glue.h \
@@ -61,6 +62,32 @@ _build/nrf52832_xxaa/main.c.o: ../../../main.c \
  ../../../../../../components/libraries/util/sdk_errors.h \
  ../../../../../../components/libraries/util/sdk_resources.h \
  ../../../../../../modules/nrfx/drivers/nrfx_errors.h \
+ ../../../../../../modules/nrfx/hal/nrf_clock.h \
+ ../../../../../../modules/nrfx/drivers/include/nrfx_power_clock.h \
+ ../../../../../../integration/nrfx/legacy/nrf_drv_power.h \
+ ../../../../../../modules/nrfx/drivers/include/nrfx_power.h \
+ ../../../../../../modules/nrfx/hal/nrf_power.h \
+ ../../../../../../components/libraries/serial/nrf_serial.h \
+ ../../../../../../integration/nrfx/legacy/nrf_drv_uart.h \
+ ../../../../../../modules/nrfx/drivers/include/nrfx_uarte.h \
+ ../../../../../../modules/nrfx/hal/nrf_uarte.h \
+ ../../../../../../modules/nrfx/drivers/include/nrfx_uart.h \
+ ../../../../../../modules/nrfx/hal/nrf_uart.h \
+ ../../../../../../components/libraries/queue/nrf_queue.h \
+ /usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/string.h \
+ /usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/string.h \
+ ../../../../../../components/libraries/experimental_log/nrf_log_instance.h \
+ ../../../../../../components/libraries/experimental_section_vars/nrf_section.h \
+ ../../../../../../components/libraries/experimental_log/nrf_log_types.h \
+ ../../../../../../components/libraries/mutex/nrf_mtx.h \
+ ../../../../../../components/libraries/atomic/nrf_atomic.h \
+ ../../../../../../components/libraries/util/sdk_common.h \
+ ../../../../../../components/libraries/util/sdk_os.h \
+ ../../../../../../components/libraries/util/app_util.h \
+ ../../../../../../components/libraries/util/sdk_macros.h \
+ ../../../../../../components/libraries/timer/app_timer.h \
+ ../../../../../../components/libraries/util/app_error.h \
+ ../../../../../../integration/nrfx/legacy/nrf_drv_spi.h \
  ../../../../../../modules/nrfx/drivers/include/nrfx_spim.h \
  ../../../../../../modules/nrfx/hal/nrf_spim.h \
  ../../../../../../modules/nrfx/drivers/include/nrfx_spi.h \
@@ -69,19 +96,9 @@ _build/nrf52832_xxaa/main.c.o: ../../../main.c \
  ../../../../../../components/libraries/delay/nrf_delay.h \
  ../../../../../../components/boards/boards.h \
  ../../../../../../components/boards/pca10040.h \
- ../../../../../../components/libraries/util/app_error.h \
- /usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/string.h \
- /usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/string.h \
  ../../../../../../components/libraries/experimental_log/nrf_log.h \
- ../../../../../../components/libraries/util/sdk_common.h \
- ../../../../../../components/libraries/util/sdk_os.h \
- ../../../../../../components/libraries/util/app_util.h \
- ../../../../../../components/libraries/util/sdk_macros.h \
- ../../../../../../components/libraries/experimental_section_vars/nrf_section.h \
  ../../../../../../components/libraries/strerror/nrf_strerror.h \
  ../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h \
- ../../../../../../components/libraries/experimental_log/nrf_log_instance.h \
- ../../../../../../components/libraries/experimental_log/nrf_log_types.h \
  ../../../../../../components/libraries/experimental_log/nrf_log_types.h \
  ../../../../../../components/libraries/experimental_log/nrf_log_ctrl.h \
  ../../../../../../components/libraries/experimental_log/src/nrf_log_ctrl_internal.h \
@@ -91,16 +108,6 @@ _build/nrf52832_xxaa/main.c.o: ../../../main.c \
  /usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine/stdlib.h \
  ../../../../../../components/libraries/balloc/nrf_balloc.h \
  ../../../../../../components/libraries/experimental_log/nrf_log_default_backends.h
-
-../../../../../../integration/nrfx/legacy/nrf_drv_spi.h:
-
-../../../../../../modules/nrfx/nrfx.h:
-
-../../../../../../integration/nrfx/nrfx_config.h:
-
-../config/sdk_config.h:
-
-../../../../../../modules/nrfx/drivers/nrfx_common.h:
 
 /usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include/stdint.h:
 
@@ -116,9 +123,9 @@ _build/nrf52832_xxaa/main.c.o: ../../../main.c \
 
 /usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_stdint.h:
 
-/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include/stddef.h:
-
 /usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include/stdbool.h:
+
+/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include/stddef.h:
 
 ../../../../../../modules/nrfx/mdk/nrf.h:
 
@@ -143,6 +150,18 @@ _build/nrf52832_xxaa/main.c.o: ../../../main.c \
 ../../../../../../modules/nrfx/mdk/nrf52_name_change.h:
 
 ../../../../../../modules/nrfx/mdk/compiler_abstraction.h:
+
+../../../../../../integration/nrfx/legacy/nrf_drv_clock.h:
+
+../../../../../../modules/nrfx/drivers/include/nrfx_clock.h:
+
+../../../../../../modules/nrfx/nrfx.h:
+
+../../../../../../integration/nrfx/nrfx_config.h:
+
+../config/sdk_config.h:
+
+../../../../../../modules/nrfx/drivers/nrfx_common.h:
 
 ../../../../../../modules/nrfx/mdk/nrf_peripherals.h:
 
@@ -218,6 +237,58 @@ _build/nrf52832_xxaa/main.c.o: ../../../main.c \
 
 ../../../../../../modules/nrfx/drivers/nrfx_errors.h:
 
+../../../../../../modules/nrfx/hal/nrf_clock.h:
+
+../../../../../../modules/nrfx/drivers/include/nrfx_power_clock.h:
+
+../../../../../../integration/nrfx/legacy/nrf_drv_power.h:
+
+../../../../../../modules/nrfx/drivers/include/nrfx_power.h:
+
+../../../../../../modules/nrfx/hal/nrf_power.h:
+
+../../../../../../components/libraries/serial/nrf_serial.h:
+
+../../../../../../integration/nrfx/legacy/nrf_drv_uart.h:
+
+../../../../../../modules/nrfx/drivers/include/nrfx_uarte.h:
+
+../../../../../../modules/nrfx/hal/nrf_uarte.h:
+
+../../../../../../modules/nrfx/drivers/include/nrfx_uart.h:
+
+../../../../../../modules/nrfx/hal/nrf_uart.h:
+
+../../../../../../components/libraries/queue/nrf_queue.h:
+
+/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/string.h:
+
+/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/string.h:
+
+../../../../../../components/libraries/experimental_log/nrf_log_instance.h:
+
+../../../../../../components/libraries/experimental_section_vars/nrf_section.h:
+
+../../../../../../components/libraries/experimental_log/nrf_log_types.h:
+
+../../../../../../components/libraries/mutex/nrf_mtx.h:
+
+../../../../../../components/libraries/atomic/nrf_atomic.h:
+
+../../../../../../components/libraries/util/sdk_common.h:
+
+../../../../../../components/libraries/util/sdk_os.h:
+
+../../../../../../components/libraries/util/app_util.h:
+
+../../../../../../components/libraries/util/sdk_macros.h:
+
+../../../../../../components/libraries/timer/app_timer.h:
+
+../../../../../../components/libraries/util/app_error.h:
+
+../../../../../../integration/nrfx/legacy/nrf_drv_spi.h:
+
 ../../../../../../modules/nrfx/drivers/include/nrfx_spim.h:
 
 ../../../../../../modules/nrfx/hal/nrf_spim.h:
@@ -234,31 +305,11 @@ _build/nrf52832_xxaa/main.c.o: ../../../main.c \
 
 ../../../../../../components/boards/pca10040.h:
 
-../../../../../../components/libraries/util/app_error.h:
-
-/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/string.h:
-
-/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/string.h:
-
 ../../../../../../components/libraries/experimental_log/nrf_log.h:
-
-../../../../../../components/libraries/util/sdk_common.h:
-
-../../../../../../components/libraries/util/sdk_os.h:
-
-../../../../../../components/libraries/util/app_util.h:
-
-../../../../../../components/libraries/util/sdk_macros.h:
-
-../../../../../../components/libraries/experimental_section_vars/nrf_section.h:
 
 ../../../../../../components/libraries/strerror/nrf_strerror.h:
 
 ../../../../../../components/libraries/experimental_log/src/nrf_log_internal.h:
-
-../../../../../../components/libraries/experimental_log/nrf_log_instance.h:
-
-../../../../../../components/libraries/experimental_log/nrf_log_types.h:
 
 ../../../../../../components/libraries/experimental_log/nrf_log_types.h:
 
