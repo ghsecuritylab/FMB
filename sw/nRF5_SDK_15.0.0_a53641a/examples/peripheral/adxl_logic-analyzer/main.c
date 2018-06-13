@@ -37,8 +37,8 @@
 #include "nrf_log_ctrl.h"
 #include "nrf_log_default_backends.h"
 
-#define SPI1_INSTANCE  0 /**< SPI 1 instance index. */
-static const nrf_drv_spi_t spi_adxl = NRF_DRV_SPI_INSTANCE(SPI1_INSTANCE);  /**< SPI 1 instance. */
+#define SPI0_INSTANCE  0 /**< SPI 1 instance index. */
+static const nrf_drv_spi_t spi_adxl = NRF_DRV_SPI_INSTANCE(SPI0_INSTANCE);  /**< SPI 1 instance. */
 
 static volatile bool spi_xfer_done;  /**< Flag used to indicate that SPI instance completed the transfer. */
 
