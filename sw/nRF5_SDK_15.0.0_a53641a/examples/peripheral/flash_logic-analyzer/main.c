@@ -41,11 +41,11 @@
 static const nrf_drv_spi_t spi_flash= NRF_DRV_SPI_INSTANCE(SPI0_INSTANCE);  /**< SPI 1 instance. */
 static volatile bool spi_xfer_done;  /**< Flag used to indicate that SPI instance completed the transfer. */
 
-static uint8_t       m_tx_buf[8];           /**< TX buffer. */
-static uint8_t       m_rx_buf[8];    /**< RX buffer. */
+static uint8_t       m_tx_buf[2];           /**< TX buffer. */
+static uint8_t       m_rx_buf[3];    /**< RX buffer. */
 static const uint8_t m_length = sizeof(m_tx_buf);        /**< Transfer length. */
 
-static uint8_t adxl_data[6];
+static uint8_t flash_data[3];
 
 
 ret_code_t ret;
@@ -101,6 +101,10 @@ void serial_uninitialize();
 
 int main(void)
 {
+   /* int HOLD = 22;
+    nrf_gpio_cfg_output(HOLD);
+    nrf_gpio_pin_set(HOLD);
+    */
     ret = nrf_drv_clock_init();
     APP_ERROR_CHECK(ret);
     ret = nrf_drv_power_init(NULL);
@@ -119,8 +123,7 @@ int main(void)
     spi_config_flash.sck_pin  = SPI_SCK_PIN;
     
     APP_ERROR_CHECK(nrf_drv_spi_init(&spi_flash, &spi_config_flash, spi_event_handler, NULL));
-    
-    
+  
     uint8_t newline[2];
     newline[0] = 0x0D;
     newline[1] = 0x0A;
@@ -129,17 +132,12 @@ int main(void)
     {
         memset(m_rx_buf, 0, m_length);
         memset(m_tx_buf, 0, m_length);
-        m_tx_buf[0] = 0x0B;
-        m_tx_buf[1] = 0x0E;
-        m_tx_buf[2] = 0x00;
-        m_tx_buf[3] = 0x00;
-        m_tx_buf[4] = 0x00;
-        m_tx_buf[5] = 0x00;
-        m_tx_buf[6] = 0x00;
-        m_tx_buf[7] = 0x00;
+        m_tx_buf[0] = 0x9F;
+        m_tx_buf[0] = 0x00;
+        
 
         spi_xfer_done = false;
-        APP_ERROR_CHECK(nrf_drv_spi_transfer(&spi_flash, m_tx_buf, 8, m_rx_buf, 8));
+        APP_ERROR_CHECK(nrf_drv_spi_transfer(&spi_flash, m_tx_buf, 2, m_rx_buf, 3));
         nrf_delay_ms(1000);
 
         while (!spi_xfer_done)
@@ -147,11 +145,11 @@ int main(void)
             __WFE();
         }     
         
-        for(int i = 2; i < 8; i++){
-            adxl_data[i-2] = m_rx_buf[i];
+        for(int i = 0; i < 3; i++){
+            flash_data[i] = m_rx_buf[i];
         }
         
-        (void)nrf_serial_write(&serial_uart, &adxl_data[0], (sizeof(adxl_data)), NULL, 0);
+        (void)nrf_serial_write(&serial_uart, &flash_data[0], (sizeof(flash_data)), NULL, 0);
         (void)nrf_serial_write(&serial_uart, &newline[0], (sizeof(newline)), NULL, 0);
         (void)nrf_serial_flush(&serial_uart, 0);
         
