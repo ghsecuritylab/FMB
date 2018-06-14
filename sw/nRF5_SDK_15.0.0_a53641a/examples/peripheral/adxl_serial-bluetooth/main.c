@@ -1,5 +1,5 @@
 /**
- * FMB ADXL Serial Bluetooth
+ * FMB ADXL Logic Analyzer
  * Revision 1
  * 06/12/2018
  * 
@@ -139,6 +139,13 @@ int main(void)
     
     while (true)
     {
+        spi_xfer_done = false;
+        APP_ERROR_CHECK(nrf_drv_spi_transfer(&spi_adxl, powerctl, 3, m_rx_buf, 3));
+        while (!spi_xfer_done)
+        {
+            __WFE();
+        }   
+        
         memset(m_rx_buf, 0, m_length);
         memset(m_tx_buf, 0, m_length);
         m_tx_buf[0] = 0x0B;
