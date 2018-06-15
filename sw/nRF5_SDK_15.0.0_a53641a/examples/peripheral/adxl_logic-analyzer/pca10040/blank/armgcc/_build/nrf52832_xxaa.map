@@ -5352,7 +5352,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 _build/nrf52832_xxaa/main.c.o
  .data          0x0000000000000000        0x0 _build/nrf52832_xxaa/main.c.o
  .bss           0x0000000000000000        0x0 _build/nrf52832_xxaa/main.c.o
- .debug_macro   0x0000000000000000      0xa78 _build/nrf52832_xxaa/main.c.o
  .debug_macro   0x0000000000000000       0x22 _build/nrf52832_xxaa/main.c.o
  .debug_macro   0x0000000000000000       0x4f _build/nrf52832_xxaa/main.c.o
  .debug_macro   0x0000000000000000       0x51 _build/nrf52832_xxaa/main.c.o
@@ -6916,7 +6915,7 @@ OUTPUT(_build/nrf52832_xxaa.out elf32-littlearm)
  .debug_str     0x0000000000079e2c      0x885 _build/nrf52832_xxaa/nrfx_uarte.c.o
                                       0x6f598 (size before relaxing)
  .debug_str     0x000000000007a6b1     0x1439 _build/nrf52832_xxaa/main.c.o
-                                      0x74a21 (size before relaxing)
+                                      0x749fe (size before relaxing)
  .debug_str     0x000000000007baea      0x265 _build/nrf52832_xxaa/system_nrf52.c.o
                                       0x5c4dd (size before relaxing)
 
@@ -6970,7 +6969,7 @@ OUTPUT(_build/nrf52832_xxaa.out elf32-littlearm)
  .debug_ranges  0x00000000000033b8      0x110 _build/nrf52832_xxaa/main.c.o
  .debug_ranges  0x00000000000034c8      0x168 _build/nrf52832_xxaa/system_nrf52.c.o
 
-.debug_macro    0x0000000000000000     0x5c3e
+.debug_macro    0x0000000000000000     0x66aa
  .debug_macro   0x0000000000000000      0x3be _build/nrf52832_xxaa/nrf_log_frontend.c.o
  .debug_macro   0x00000000000003be       0x16 _build/nrf52832_xxaa/nrf_log_frontend.c.o
  .debug_macro   0x00000000000003d4       0x9a _build/nrf52832_xxaa/nrf_log_frontend.c.o
@@ -7027,10 +7026,11 @@ OUTPUT(_build/nrf52832_xxaa.out elf32-littlearm)
  .debug_macro   0x0000000000004dee      0x3d7 _build/nrf52832_xxaa/nrfx_uart.c.o
  .debug_macro   0x00000000000051c5      0x3e9 _build/nrf52832_xxaa/nrfx_uarte.c.o
  .debug_macro   0x00000000000055ae      0x569 _build/nrf52832_xxaa/main.c.o
- .debug_macro   0x0000000000005b17       0x16 _build/nrf52832_xxaa/main.c.o
- .debug_macro   0x0000000000005b2d       0x10 _build/nrf52832_xxaa/main.c.o
- .debug_macro   0x0000000000005b3d       0x10 _build/nrf52832_xxaa/main.c.o
- .debug_macro   0x0000000000005b4d       0xf1 _build/nrf52832_xxaa/system_nrf52.c.o
+ .debug_macro   0x0000000000005b17      0xa6c _build/nrf52832_xxaa/main.c.o
+ .debug_macro   0x0000000000006583       0x16 _build/nrf52832_xxaa/main.c.o
+ .debug_macro   0x0000000000006599       0x10 _build/nrf52832_xxaa/main.c.o
+ .debug_macro   0x00000000000065a9       0x10 _build/nrf52832_xxaa/main.c.o
+ .debug_macro   0x00000000000065b9       0xf1 _build/nrf52832_xxaa/system_nrf52.c.o
 
 .debug_frame    0x0000000000000000     0x18c4
  .debug_frame   0x0000000000000000      0x2fc _build/nrf52832_xxaa/nrf_log_frontend.c.o
