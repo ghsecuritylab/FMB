@@ -1176,13 +1176,13 @@ design rules under a new name.</description>
 <element name="C11" library="nrf52832-breakout-temp" package="0402" value="0.8pF" x="4.700340625" y="9.656309375">
 <attribute name="PROD_ID" value="CAP-13456" x="4.700340625" y="9.656309375" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C12" library="0p1_uF_capacitor" package="CAP_0402-L" value="C0402X5R0G104M020BCCAP_0402-L" x="4.1336875" y="0.563740625" rot="R270">
-<attribute name="MANUFACTURER_PART_NUMBER" value="C0402C0G1C101J020BC" x="4.1336875" y="0.563740625" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VENDOR" value="TDK" x="4.1336875" y="0.563740625" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="C12" library="0p1_uF_capacitor" package="CAP_0402-L" value="C0402X5R0G104M020BCCAP_0402-L" x="4.045159375" y="0.56073125" rot="R270">
+<attribute name="MANUFACTURER_PART_NUMBER" value="C0402C0G1C101J020BC" x="4.045159375" y="0.56073125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VENDOR" value="TDK" x="4.045159375" y="0.56073125" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C3" library="0p1_uF_capacitor" package="CAP_0402-L" value="C0402X5R0G104M020BCCAP_0402-L" x="2.929071875" y="0.7179125" rot="R270">
-<attribute name="MANUFACTURER_PART_NUMBER" value="C0402C0G1C101J020BC" x="2.929071875" y="0.7179125" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VENDOR" value="TDK" x="2.929071875" y="0.7179125" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="C3" library="0p1_uF_capacitor" package="CAP_0402-L" value="C0402X5R0G104M020BCCAP_0402-L" x="2.659971875" y="0.5416125" rot="R180">
+<attribute name="MANUFACTURER_PART_NUMBER" value="C0402C0G1C101J020BC" x="2.659971875" y="0.5416125" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VENDOR" value="TDK" x="2.659971875" y="0.5416125" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C4" library="100_pF_capacitor" package="CAP_0402-L" value="C0402C0G1C101J020BCCAP_0402-L" x="1.41106875" y="9.031475" rot="R180">
 <attribute name="MANUFACTURER_PART_NUMBER" value="C0402C0G1C101J020BC" x="1.41106875" y="9.031475" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1233,8 +1233,8 @@ design rules under a new name.</description>
 <signal name="DEC1-QFAA">
 <contactref element="U1" pad="1"/>
 <contactref element="C3" pad="1"/>
-<wire x1="2.93661875" y1="1.518084375" x2="2.93661875" y2="1.022240625" width="0.1524" layer="1"/>
-<wire x1="2.93661875" y1="1.022240625" x2="2.929071875" y2="0.8703125" width="0.1524" layer="1"/>
+<wire x1="2.812371875" y1="0.5416125" x2="2.93661875" y2="0.665859375" width="0.1524" layer="1"/>
+<wire x1="2.93661875" y1="0.665859375" x2="2.93661875" y2="1.518084375" width="0.1524" layer="1"/>
 </signal>
 <signal name="DEC3-QFAA">
 <contactref element="U1" pad="33"/>
@@ -1413,7 +1413,8 @@ design rules under a new name.</description>
 <contactref element="J2" pad="4"/>
 <contactref element="U$2" pad="2"/>
 <contactref element="C1" pad="1"/>
-<wire x1="4.13661875" y1="3.378084375" x2="2.27661875" y2="3.378084375" width="0.254" layer="1"/>
+<wire x1="4.93661875" y1="7.238084375" x2="4.93661875" y2="4.578084375" width="0.254" layer="1"/>
+<wire x1="2.27661875" y1="3.378084375" x2="4.13661875" y2="3.378084375" width="0.254" layer="1"/>
 <via x="7.049246875" y="4.27151875" extent="1-16" drill="0.254"/>
 <via x="4.5" y="6.25" extent="1-16" drill="0.2032"/>
 <via x="4.5" y="5.25" extent="1-16" drill="0.2032"/>
@@ -1453,18 +1454,15 @@ design rules under a new name.</description>
 <wire x1="4.784625" y1="4.695771875" x2="4.765403125" y2="4.5574375" width="0.1524" layer="16"/>
 <wire x1="3.5" y1="2.75" x2="4" y2="3.25" width="0.1524" layer="16"/>
 <wire x1="4" y1="3.25" x2="4.5" y2="3.25" width="0.1524" layer="16"/>
-<wire x1="4.1336875" y1="0.716140625" x2="3.56931875" y2="0.693284375" width="0.1524" layer="1"/>
-<wire x1="3.56931875" y1="0.693284375" x2="3.536196875" y2="0.70565" width="0.1524" layer="1"/>
-<via x="3.536196875" y="0.70565" extent="1-16" drill="0.2032"/>
+<wire x1="4.045159375" y1="0.71313125" x2="3.477784375" y2="0.71313125" width="0.1524" layer="1"/>
+<wire x1="3.477784375" y1="0.71313125" x2="3.470028125" y2="0.7208875" width="0.1524" layer="1"/>
+<via x="3.470028125" y="0.7208875" extent="1-16" drill="0.2032"/>
 <wire x1="5.672246875" y1="4.682375" x2="5.732359375" y2="4.7424875" width="0.1524" layer="16"/>
-<wire x1="4.93661875" y1="7.238084375" x2="4.93661875" y2="4.578084375" width="0.2032" layer="1"/>
-<wire x1="4.93661875" y1="4.578084375" x2="5.13661875" y2="4.378084375" width="0.2032" layer="1"/>
-<wire x1="5.13661875" y1="4.378084375" x2="3.871915625" y2="4.378084375" width="0.2032" layer="1"/>
-<wire x1="3.871915625" y1="4.378084375" x2="3.75" y2="4.5" width="0.2032" layer="1"/>
-<wire x1="5.13661875" y1="4.378084375" x2="4.13661875" y2="3.378084375" width="0.2032" layer="1"/>
-<wire x1="1.079059375" y1="0.48276875" x2="2.209765625" y2="0.48276875" width="0.1524" layer="1"/>
-<wire x1="2.209765625" y1="0.48276875" x2="2.337165625" y2="0.52595" width="0.1524" layer="1"/>
-<via x="2.337165625" y="0.52595" extent="1-16" drill="0.2032"/>
+<wire x1="4.93661875" y1="4.578084375" x2="5.13661875" y2="4.378084375" width="0" layer="19" extent="1-1"/>
+<wire x1="4.765403125" y1="4.5574375" x2="4.93661875" y2="4.578084375" width="0" layer="19" extent="1-16"/>
+<wire x1="4.13661875" y1="3.378084375" x2="4" y2="3.25" width="0" layer="19" extent="1-16"/>
+<wire x1="2.482171875" y1="0.5416125" x2="3.477784375" y2="0.71313125" width="0" layer="19" extent="1-1"/>
+<wire x1="1.079059375" y1="0.48276875" x2="2.482171875" y2="0.5416125" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VDD">
 <contactref element="U1" pad="13"/>
@@ -1503,12 +1501,12 @@ design rules under a new name.</description>
 <vertex x="20" y="15"/>
 <vertex x="20" y="0"/>
 </polygon>
-<via x="4.761296875" y="0.554146875" extent="1-16" drill="0.2032"/>
-<wire x1="4.1336875" y1="0.385940625" x2="4.0578625" y2="0.395634375" width="0.1524" layer="1"/>
-<wire x1="4.521571875" y1="0.395634375" x2="4.761296875" y2="0.554146875" width="0.1524" layer="1"/>
-<wire x1="4.0578625" y1="0.395634375" x2="4.521571875" y2="0.395634375" width="0.1524" layer="1"/>
-<via x="7.61038125" y="0.6133625" extent="1-16" drill="0.2032"/>
-<wire x1="4.761296875" y1="0.554146875" x2="7.61038125" y2="0.6133625" width="0" layer="19" extent="1-1"/>
+<via x="4.629359375" y="0.56336875" extent="1-16" drill="0.2032"/>
+<wire x1="4.045159375" y1="0.38293125" x2="4.0578625" y2="0.395634375" width="0.1524" layer="1"/>
+<wire x1="4.0578625" y1="0.395634375" x2="4.266846875" y2="0.395634375" width="0.1524" layer="1"/>
+<wire x1="4.43458125" y1="0.56336875" x2="4.629359375" y2="0.56336875" width="0.1524" layer="1"/>
+<wire x1="4.266846875" y1="0.395634375" x2="4.43458125" y2="0.56336875" width="0.1524" layer="1"/>
+<wire x1="1" y1="5.83969375" x2="1.637140625" y2="2.16296875" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DEC4-QFAA">
 <contactref element="C8" pad="1"/>
@@ -1520,11 +1518,11 @@ design rules under a new name.</description>
 <contactref element="U1" pad="8"/>
 <contactref element="J2" pad="6"/>
 <wire x1="5.73661875" y1="1.518084375" x2="5.73661875" y2="0.912178125" width="0.1524" layer="1"/>
-<wire x1="5.73661875" y1="0.912178125" x2="5.528884375" y2="0.63098125" width="0.1524" layer="1"/>
-<via x="5.528884375" y="0.63098125" extent="1-16" drill="0.2032"/>
+<wire x1="5.73661875" y1="0.912178125" x2="5.47323125" y2="0.648790625" width="0.1524" layer="1"/>
+<via x="5.47323125" y="0.648790625" extent="1-16" drill="0.2032"/>
 <wire x1="1.314003125" y1="4.80801875" x2="-2.459215625" y2="4.80801875" width="0.1524" layer="8"/>
 <wire x1="3.27905625" y1="2.2166" x2="2.9666" y2="2.52905625" width="0.1524" layer="8"/>
-<wire x1="5.528884375" y1="0.63098125" x2="3.905421875" y2="2.2166" width="0.1524" layer="8"/>
+<wire x1="5.47323125" y1="0.648790625" x2="3.905421875" y2="2.2166" width="0.1524" layer="8"/>
 <wire x1="2.9666" y1="3.155421875" x2="1.314003125" y2="4.80801875" width="0.1524" layer="8"/>
 <wire x1="3.905421875" y1="2.2166" x2="3.27905625" y2="2.2166" width="0.1524" layer="8"/>
 <wire x1="2.9666" y1="2.52905625" x2="2.9666" y2="3.155421875" width="0.1524" layer="8"/>
