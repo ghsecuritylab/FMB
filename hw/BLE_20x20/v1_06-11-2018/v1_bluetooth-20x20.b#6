@@ -183,7 +183,7 @@
 <text x="6.7" y="8.7" size="0.125" layer="121">SWDCLK</text>
 <text x="8.3" y="7.8" size="0.125" layer="121">RESET</text>
 <text x="9.3" y="2.7" size="0.125" layer="121" rot="R270">P0.12</text>
-<text x="4.9" y="0" size="0.125" layer="21">P0.06</text>
+<text x="4.9" y="0" size="0.125" layer="121">P0.06</text>
 </plain>
 <libraries>
 <library name="0p1_uF_capacitor">
