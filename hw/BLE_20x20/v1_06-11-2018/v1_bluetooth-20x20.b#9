@@ -170,19 +170,19 @@
 <wire x1="-0.4" y1="9.9" x2="9.6" y2="9.9" width="0.1524" layer="21"/>
 <wire x1="9.6" y1="9.9" x2="9.6" y2="-0.1" width="0.1524" layer="21"/>
 <wire x1="9.6" y1="-0.1" x2="-0.4" y2="-0.1" width="0.1524" layer="21"/>
-<text x="17" y="3" size="0.6096" layer="21">VDD</text>
-<text x="12.5" y="3" size="0.6096" layer="21">GND</text>
+<text x="17" y="3" size="0.6096" layer="112">VDD</text>
+<text x="12.5" y="3" size="0.6096" layer="121">GND</text>
 <text x="-6" y="19" size="0.3048" layer="121">SWDIO</text>
 <text x="-6" y="16" size="0.3048" layer="121">SWDCLK</text>
 <text x="-6" y="13" size="0.3048" layer="112">VDD</text>
-<text x="-6" y="11" size="0.3048" layer="21">GND</text>
-<text x="-6" y="8" size="0.3048" layer="21">RESET</text>
-<text x="-6" y="5" size="0.3048" layer="21">P0.06</text>
-<text x="-6" y="3" size="0.3048" layer="21">P0.12</text>
-<text x="5.8" y="8.7" size="0.125" layer="21">SWDIO</text>
-<text x="6.7" y="8.7" size="0.125" layer="21">SWDCLK</text>
-<text x="8.3" y="7.8" size="0.125" layer="21">RESET</text>
-<text x="9.3" y="2.7" size="0.125" layer="21" rot="R270">P0.12</text>
+<text x="-6" y="11" size="0.3048" layer="121">GND</text>
+<text x="-6" y="8" size="0.3048" layer="112">RESET</text>
+<text x="-6" y="5" size="0.3048" layer="121">P0.06</text>
+<text x="-6" y="3" size="0.3048" layer="121">P0.12</text>
+<text x="5.8" y="8.7" size="0.125" layer="121">SWDIO</text>
+<text x="6.7" y="8.7" size="0.125" layer="121">SWDCLK</text>
+<text x="8.3" y="7.8" size="0.125" layer="121">RESET</text>
+<text x="9.3" y="2.7" size="0.125" layer="121" rot="R270">P0.12</text>
 <text x="4.9" y="0" size="0.125" layer="21">P0.06</text>
 </plain>
 <libraries>
