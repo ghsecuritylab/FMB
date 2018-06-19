@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -158,9 +158,9 @@
 </layers>
 <board>
 <plain>
-<wire x1="-5.9" y1="-2.1" x2="-5.9" y2="20.9" width="0.1524" layer="20"/>
-<wire x1="-5.9" y1="20.9" x2="21.1" y2="20.9" width="0.1524" layer="20"/>
-<wire x1="21.1" y1="20.9" x2="21.1" y2="-2.1" width="0.1524" layer="20"/>
+<wire x1="-5.9" y1="-2.1" x2="-5.9" y2="21.9" width="0.1524" layer="20"/>
+<wire x1="-5.9" y1="21.9" x2="21.1" y2="21.9" width="0.1524" layer="20"/>
+<wire x1="21.1" y1="21.9" x2="21.1" y2="-2.1" width="0.1524" layer="20"/>
 <wire x1="21.1" y1="-2.1" x2="-5.9" y2="-2.1" width="0.1524" layer="20"/>
 <text x="17.5" y="3" size="0.6096" layer="112">VDD</text>
 <text x="13" y="3" size="0.6096" layer="112">GND</text>
@@ -1239,7 +1239,7 @@ design rules under a new name.</description>
 </element>
 <element name="U$1" library="ADXL362" package="TFLGA-16/3.3MMX3.1MM" value="ADXL362" x="7.107359375" y="4.1424875" rot="MR270"/>
 <element name="U$2" library="tuninginductor" package="0402" value="TUNINGINDUCTOR" x="7.8" y="16.47" rot="R90"/>
-<element name="U$3" library="antennanew" package="2450AT14A0100" value="2450AT14A0100" x="17.65235" y="18.946959375"/>
+<element name="U$3" library="antennanew" package="2450AT14A0100" value="2450AT14A0100" x="17.65235" y="19.046959375"/>
 <element name="U$5" library="0402-1005" package="0402-1005" value="0402-1005" x="10.3111" y="14.762175" rot="R180"/>
 <element name="U$6" library="32_mhz_crystal" package="32MHZCRYSTAL" value="32MHZCRYSTAL" x="1.5359125" y="3.70774375" rot="MR90"/>
 <element name="U1" library="nrf52832-breakout-temp" package="QFN48-6X6MM" value="NRF52832" x="5.23661875" y="4.278084375" rot="R90">
@@ -1576,7 +1576,10 @@ design rules under a new name.</description>
 <wire x1="13.898925" y1="18" x2="17.4" y2="18" width="0.517" layer="1"/>
 <wire x1="17.4" y1="18" x2="17.9" y2="18" width="0.8" layer="1"/>
 <wire x1="17.9" y1="18" x2="17.95235" y2="18.05235" width="0.8" layer="1"/>
-<wire x1="17.95235" y1="18.05235" x2="17.95235" y2="19.346959375" width="0.8" layer="1"/>
+<wire x1="17.95235" y1="18.05235" x2="17.95235" y2="19.446959375" width="0.8" layer="1"/>
+</signal>
+<signal name="N$3">
+<wire x1="19.6" y1="19.6" x2="19.6" y2="15.8" width="0.5" layer="1"/>
 </signal>
 </signals>
 </board>

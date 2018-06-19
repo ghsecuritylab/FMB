@@ -1573,10 +1573,10 @@ design rules under a new name.</description>
 <contactref element="U$5" pad="1"/>
 <contactref element="U$3" pad="FEED"/>
 <wire x1="10.6611" y1="14.762175" x2="13.898925" y2="18" width="0.517" layer="1"/>
-<wire x1="13.898925" y1="18" x2="17" y2="18" width="0.517" layer="1"/>
-<wire x1="17" y1="18" x2="17.9" y2="18" width="0.8" layer="1"/>
-<wire x1="18.05235" y1="18.15235" x2="18.05235" y2="19.446959375" width="0.8" layer="1"/>
-<wire x1="17.9" y1="18" x2="18.05235" y2="18.15235" width="0.8" layer="1"/>
+<wire x1="13.898925" y1="18" x2="17.2" y2="18" width="0.517" layer="1"/>
+<wire x1="17.2" y1="18" x2="18" y2="18" width="0.8" layer="1"/>
+<wire x1="18" y1="18" x2="18.05235" y2="18.05235" width="0.8" layer="1"/>
+<wire x1="18.05235" y1="18.05235" x2="18.05235" y2="19.446959375" width="0.8" layer="1"/>
 </signal>
 </signals>
 </board>
