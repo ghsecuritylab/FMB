@@ -32,7 +32,7 @@
             ]
         },
         {
-            "filename_prefix": "fmbpcb_v8_memory",
+            "filename_prefix": "v1_bluetooth-20x20",
             "format_specifier": {
                 "decimal": 4,
                 "integer": 3
@@ -221,7 +221,7 @@
             "version": "X2"
         }
     ],
-    "timestamp": "2018-06-18T12:13:08",
+    "timestamp": "2018-06-19T11:29:22",
     "type": "EAGLE CAM job",
     "units": "metric",
     "version": "8.6.1"
