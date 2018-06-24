@@ -1,0 +1,1437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="../adxl_logic-analyzer" name="0">
+      <in>main.c</in>
+    </df>
+    <logicalFolder name="nRF5_SDK_15.0.0_a53641a"
+                   displayName="nRF5_SDK_15.0.0_a53641a"
+                   projectFiles="true"
+                   root="..">
+      <logicalFolder name="components" displayName="components" projectFiles="true">
+        <logicalFolder name="boards" displayName="boards" projectFiles="true">
+          <itemPath>../../../components/boards/boards.c</itemPath>
+          <itemPath>../../../components/boards/boards.h</itemPath>
+          <itemPath>../../../components/boards/pca10040.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="drivers_nrf" displayName="drivers_nrf" projectFiles="true">
+          <logicalFolder name="nrf_soc_nosd"
+                         displayName="nrf_soc_nosd"
+                         projectFiles="true">
+            <itemPath>../../../components/drivers_nrf/nrf_soc_nosd/nrf_error.h</itemPath>
+            <itemPath>../../../components/drivers_nrf/nrf_soc_nosd/nrf_nvic.c</itemPath>
+            <itemPath>../../../components/drivers_nrf/nrf_soc_nosd/nrf_soc.c</itemPath>
+            <itemPath>../../../components/drivers_nrf/nrf_soc_nosd/nrf_soc.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="libraries" displayName="libraries" projectFiles="true">
+          <logicalFolder name="atomic" displayName="atomic" projectFiles="true">
+            <itemPath>../../../components/libraries/atomic/nrf_atomic.c</itemPath>
+            <itemPath>../../../components/libraries/atomic/nrf_atomic.h</itemPath>
+            <itemPath>../../../components/libraries/atomic/nrf_atomic_internal.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="balloc" displayName="balloc" projectFiles="true">
+            <itemPath>../../../components/libraries/balloc/nrf_balloc.c</itemPath>
+            <itemPath>../../../components/libraries/balloc/nrf_balloc.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
+            <itemPath>../../../components/libraries/bsp/bsp.c</itemPath>
+            <itemPath>../../../components/libraries/bsp/bsp.h</itemPath>
+            <itemPath>../../../components/libraries/bsp/bsp_config.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="button" displayName="button" projectFiles="true">
+            <itemPath>../../../components/libraries/button/app_button.c</itemPath>
+            <itemPath>../../../components/libraries/button/app_button.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="delay" displayName="delay" projectFiles="true">
+            <itemPath>../../../components/libraries/delay/nrf_delay.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="experimental_log"
+                         displayName="experimental_log"
+                         projectFiles="true">
+            <logicalFolder name="src" displayName="src" projectFiles="true">
+              <itemPath>../../../components/libraries/experimental_log/src/nrf_log_backend_rtt.c</itemPath>
+              <itemPath>../../../components/libraries/experimental_log/src/nrf_log_backend_serial.c</itemPath>
+              <itemPath>../../../components/libraries/experimental_log/src/nrf_log_backend_serial.h</itemPath>
+              <itemPath>../../../components/libraries/experimental_log/src/nrf_log_backend_uart.c</itemPath>
+              <itemPath>../../../components/libraries/experimental_log/src/nrf_log_ctrl_internal.h</itemPath>
+              <itemPath>../../../components/libraries/experimental_log/src/nrf_log_default_backends.c</itemPath>
+              <itemPath>../../../components/libraries/experimental_log/src/nrf_log_frontend.c</itemPath>
+              <itemPath>../../../components/libraries/experimental_log/src/nrf_log_internal.h</itemPath>
+              <itemPath>../../../components/libraries/experimental_log/src/nrf_log_str_formatter.c</itemPath>
+            </logicalFolder>
+            <itemPath>../../../components/libraries/experimental_log/nrf_log.h</itemPath>
+            <itemPath>../../../components/libraries/experimental_log/nrf_log_backend_interface.h</itemPath>
+            <itemPath>../../../components/libraries/experimental_log/nrf_log_backend_uart.h</itemPath>
+            <itemPath>../../../components/libraries/experimental_log/nrf_log_ctrl.h</itemPath>
+            <itemPath>../../../components/libraries/experimental_log/nrf_log_default_backends.h</itemPath>
+            <itemPath>../../../components/libraries/experimental_log/nrf_log_instance.h</itemPath>
+            <itemPath>../../../components/libraries/experimental_log/nrf_log_str_formatter.h</itemPath>
+            <itemPath>../../../components/libraries/experimental_log/nrf_log_types.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="experimental_memobj"
+                         displayName="experimental_memobj"
+                         projectFiles="true">
+            <itemPath>../../../components/libraries/experimental_memobj/nrf_memobj.c</itemPath>
+            <itemPath>../../../components/libraries/experimental_memobj/nrf_memobj.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="experimental_section_vars"
+                         displayName="experimental_section_vars"
+                         projectFiles="true">
+            <itemPath>../../../components/libraries/experimental_section_vars/nrf_section.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="hardfault" displayName="hardfault" projectFiles="true">
+            <logicalFolder name="nrf52" displayName="nrf52" projectFiles="true">
+              <logicalFolder name="handler" displayName="handler" projectFiles="true">
+                <itemPath>../../../components/libraries/hardfault/nrf52/handler/hardfault_handler_gcc.c</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+            <itemPath>../../../components/libraries/hardfault/hardfault_implementation.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="mutex" displayName="mutex" projectFiles="true">
+            <itemPath>../../../components/libraries/mutex/nrf_mtx.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="queue" displayName="queue" projectFiles="true">
+            <itemPath>../../../components/libraries/queue/nrf_queue.c</itemPath>
+            <itemPath>../../../components/libraries/queue/nrf_queue.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="scheduler" displayName="scheduler" projectFiles="true">
+            <itemPath>../../../components/libraries/scheduler/app_scheduler.c</itemPath>
+            <itemPath>../../../components/libraries/scheduler/app_scheduler.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="serial" displayName="serial" projectFiles="true">
+            <itemPath>../../../components/libraries/serial/nrf_serial.c</itemPath>
+            <itemPath>../../../components/libraries/serial/nrf_serial.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="strerror" displayName="strerror" projectFiles="true">
+            <itemPath>../../../components/libraries/strerror/nrf_strerror.c</itemPath>
+            <itemPath>../../../components/libraries/strerror/nrf_strerror.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="timer" displayName="timer" projectFiles="true">
+            <itemPath>../../../components/libraries/timer/app_timer.c</itemPath>
+            <itemPath>../../../components/libraries/timer/app_timer.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="util" displayName="util" projectFiles="true">
+            <itemPath>../../../components/libraries/util/app_error.c</itemPath>
+            <itemPath>../../../components/libraries/util/app_error.h</itemPath>
+            <itemPath>../../../components/libraries/util/app_error_handler_gcc.c</itemPath>
+            <itemPath>../../../components/libraries/util/app_error_weak.c</itemPath>
+            <itemPath>../../../components/libraries/util/app_error_weak.h</itemPath>
+            <itemPath>../../../components/libraries/util/app_util.h</itemPath>
+            <itemPath>../../../components/libraries/util/app_util_platform.c</itemPath>
+            <itemPath>../../../components/libraries/util/app_util_platform.h</itemPath>
+            <itemPath>../../../components/libraries/util/nordic_common.h</itemPath>
+            <itemPath>../../../components/libraries/util/nrf_assert.c</itemPath>
+            <itemPath>../../../components/libraries/util/nrf_assert.h</itemPath>
+            <itemPath>../../../components/libraries/util/nrf_bitmask.h</itemPath>
+            <itemPath>../../../components/libraries/util/sdk_common.h</itemPath>
+            <itemPath>../../../components/libraries/util/sdk_errors.h</itemPath>
+            <itemPath>../../../components/libraries/util/sdk_macros.h</itemPath>
+            <itemPath>../../../components/libraries/util/sdk_os.h</itemPath>
+            <itemPath>../../../components/libraries/util/sdk_resources.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="toolchain" displayName="toolchain" projectFiles="true">
+          <logicalFolder name="cmsis" displayName="cmsis" projectFiles="true">
+            <logicalFolder name="include" displayName="include" projectFiles="true">
+              <itemPath>../../../components/toolchain/cmsis/include/cmsis_gcc.h</itemPath>
+              <itemPath>../../../components/toolchain/cmsis/include/core_cm4.h</itemPath>
+              <itemPath>../../../components/toolchain/cmsis/include/core_cmFunc.h</itemPath>
+              <itemPath>../../../components/toolchain/cmsis/include/core_cmInstr.h</itemPath>
+              <itemPath>../../../components/toolchain/cmsis/include/core_cmSimd.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="external" displayName="external" projectFiles="true">
+        <logicalFolder name="fprintf" displayName="fprintf" projectFiles="true">
+          <itemPath>../../../external/fprintf/nrf_fprintf.c</itemPath>
+          <itemPath>../../../external/fprintf/nrf_fprintf.h</itemPath>
+          <itemPath>../../../external/fprintf/nrf_fprintf_format.c</itemPath>
+          <itemPath>../../../external/fprintf/nrf_fprintf_format.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="segger_rtt" displayName="segger_rtt" projectFiles="true">
+          <itemPath>../../../external/segger_rtt/SEGGER_RTT.c</itemPath>
+          <itemPath>../../../external/segger_rtt/SEGGER_RTT.h</itemPath>
+          <itemPath>../../../external/segger_rtt/SEGGER_RTT_Conf.h</itemPath>
+          <itemPath>../../../external/segger_rtt/SEGGER_RTT_Syscalls_GCC.c</itemPath>
+          <itemPath>../../../external/segger_rtt/SEGGER_RTT_printf.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="integration" displayName="integration" projectFiles="true">
+        <logicalFolder name="nrfx" displayName="nrfx" projectFiles="true">
+          <logicalFolder name="legacy" displayName="legacy" projectFiles="true">
+            <itemPath>../../../integration/nrfx/legacy/apply_old_config.h</itemPath>
+            <itemPath>../../../integration/nrfx/legacy/nrf_drv_clock.c</itemPath>
+            <itemPath>../../../integration/nrfx/legacy/nrf_drv_clock.h</itemPath>
+            <itemPath>../../../integration/nrfx/legacy/nrf_drv_gpiote.h</itemPath>
+            <itemPath>../../../integration/nrfx/legacy/nrf_drv_power.c</itemPath>
+            <itemPath>../../../integration/nrfx/legacy/nrf_drv_power.h</itemPath>
+            <itemPath>../../../integration/nrfx/legacy/nrf_drv_spi.c</itemPath>
+            <itemPath>../../../integration/nrfx/legacy/nrf_drv_spi.h</itemPath>
+            <itemPath>../../../integration/nrfx/legacy/nrf_drv_uart.c</itemPath>
+            <itemPath>../../../integration/nrfx/legacy/nrf_drv_uart.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../../integration/nrfx/nrfx_config.h</itemPath>
+          <itemPath>../../../integration/nrfx/nrfx_glue.h</itemPath>
+          <itemPath>../../../integration/nrfx/nrfx_log.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="modules" displayName="modules" projectFiles="true">
+        <logicalFolder name="nrfx" displayName="nrfx" projectFiles="true">
+          <logicalFolder name="drivers" displayName="drivers" projectFiles="true">
+            <logicalFolder name="include" displayName="include" projectFiles="true">
+              <itemPath>../../../modules/nrfx/drivers/include/nrfx_clock.h</itemPath>
+              <itemPath>../../../modules/nrfx/drivers/include/nrfx_gpiote.h</itemPath>
+              <itemPath>../../../modules/nrfx/drivers/include/nrfx_power.h</itemPath>
+              <itemPath>../../../modules/nrfx/drivers/include/nrfx_power_clock.h</itemPath>
+              <itemPath>../../../modules/nrfx/drivers/include/nrfx_spi.h</itemPath>
+              <itemPath>../../../modules/nrfx/drivers/include/nrfx_spim.h</itemPath>
+              <itemPath>../../../modules/nrfx/drivers/include/nrfx_uart.h</itemPath>
+              <itemPath>../../../modules/nrfx/drivers/include/nrfx_uarte.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="src" displayName="src" projectFiles="true">
+              <logicalFolder name="prs" displayName="prs" projectFiles="true">
+                <itemPath>../../../modules/nrfx/drivers/src/prs/nrfx_prs.c</itemPath>
+                <itemPath>../../../modules/nrfx/drivers/src/prs/nrfx_prs.h</itemPath>
+              </logicalFolder>
+              <itemPath>../../../modules/nrfx/drivers/src/nrfx_clock.c</itemPath>
+              <itemPath>../../../modules/nrfx/drivers/src/nrfx_gpiote.c</itemPath>
+              <itemPath>../../../modules/nrfx/drivers/src/nrfx_power.c</itemPath>
+              <itemPath>../../../modules/nrfx/drivers/src/nrfx_power_clock.c</itemPath>
+              <itemPath>../../../modules/nrfx/drivers/src/nrfx_spi.c</itemPath>
+              <itemPath>../../../modules/nrfx/drivers/src/nrfx_spim.c</itemPath>
+              <itemPath>../../../modules/nrfx/drivers/src/nrfx_uart.c</itemPath>
+              <itemPath>../../../modules/nrfx/drivers/src/nrfx_uarte.c</itemPath>
+            </logicalFolder>
+            <itemPath>../../../modules/nrfx/drivers/nrfx_common.h</itemPath>
+            <itemPath>../../../modules/nrfx/drivers/nrfx_errors.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="hal" displayName="hal" projectFiles="true">
+            <itemPath>../../../modules/nrfx/hal/nrf_clock.h</itemPath>
+            <itemPath>../../../modules/nrfx/hal/nrf_gpio.h</itemPath>
+            <itemPath>../../../modules/nrfx/hal/nrf_gpiote.h</itemPath>
+            <itemPath>../../../modules/nrfx/hal/nrf_power.h</itemPath>
+            <itemPath>../../../modules/nrfx/hal/nrf_spi.h</itemPath>
+            <itemPath>../../../modules/nrfx/hal/nrf_spim.h</itemPath>
+            <itemPath>../../../modules/nrfx/hal/nrf_uart.h</itemPath>
+            <itemPath>../../../modules/nrfx/hal/nrf_uarte.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="mdk" displayName="mdk" projectFiles="true">
+            <itemPath>../../../modules/nrfx/mdk/compiler_abstraction.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/nrf.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/nrf51_to_nrf52.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/nrf52.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/nrf52832_peripherals.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/nrf52_bitfields.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/nrf52_name_change.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/nrf_peripherals.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/system_nrf52.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="soc" displayName="soc" projectFiles="true">
+            <itemPath>../../../modules/nrfx/soc/nrfx_coredep.h</itemPath>
+            <itemPath>../../../modules/nrfx/soc/nrfx_irqs.h</itemPath>
+            <itemPath>../../../modules/nrfx/soc/nrfx_irqs_nrf52832.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../../modules/nrfx/nrfx.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>../adxl_logic-analyzer/pca10040/blank/armgcc/Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>../adxl_logic-analyzer</Elem>
+  </sourceRootList>
+  <projectmakefile>../adxl_logic-analyzer/pca10040/blank/armgcc/Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-O3 -std=c99"/>
+      </flagsDictionary>
+      <codeAssistance>
+        <buildAnalyzer>false</buildAnalyzer>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>../adxl_logic-analyzer/pca10040/blank/armgcc</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <incDir>
+              <pElem>../../..</pElem>
+            </incDir>
+          </cTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>../adxl_logic-analyzer/pca10040/blank/armgcc</preBuildCommandWorkingDir>
+          <preBuildCommand>make</preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="../../../components/boards/boards.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/drivers_nrf/nrf_soc_nosd/nrf_nvic.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/drivers_nrf/nrf_soc_nosd/nrf_soc.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/atomic/nrf_atomic.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/balloc/nrf_balloc.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/bsp/bsp.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/button/app_button.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/experimental_log/src/nrf_log_backend_rtt.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/experimental_log/src/nrf_log_backend_serial.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/experimental_memobj</pElem>
+            <pElem>../../../external/fprintf</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/balloc</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/experimental_log/src/nrf_log_backend_uart.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/experimental_memobj</pElem>
+            <pElem>../../../modules/nrfx/drivers/include</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/balloc</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../../../external/fprintf</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/experimental_log/src/nrf_log_default_backends.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../components/libraries/experimental_memobj</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/balloc</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/experimental_log/src/nrf_log_frontend.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/balloc</pElem>
+            <pElem>../../../components/libraries/experimental_memobj</pElem>
+            <pElem>../../../components/libraries/atomic</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../../../components/libraries/strerror</pElem>
+            <pElem>../../../external/fprintf</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/experimental_log/src/nrf_log_str_formatter.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../external/fprintf</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/experimental_memobj</pElem>
+            <pElem>../../../components/libraries/balloc</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/experimental_memobj/nrf_memobj.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/hardfault/hardfault_implementation.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../components/libraries/hardfault</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/hardfault/nrf52/handler/hardfault_handler_gcc.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/queue/nrf_queue.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/scheduler/app_scheduler.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/serial/nrf_serial.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/strerror/nrf_strerror.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/timer/app_timer.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/util/app_error.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/util/app_error_handler_gcc.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/util/app_error_weak.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../../../components/libraries/strerror</pElem>
+            <pElem>../../../components/libraries/experimental_memobj</pElem>
+            <pElem>../../../components/libraries/balloc</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/util/app_util_platform.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/util/nrf_assert.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../external/fprintf/nrf_fprintf.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../external/fprintf/nrf_fprintf_format.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../external/segger_rtt/SEGGER_RTT.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../external/segger_rtt/SEGGER_RTT_Syscalls_GCC.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../external/segger_rtt/SEGGER_RTT_printf.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../integration/nrfx/legacy/nrf_drv_clock.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../modules/nrfx/drivers/include</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../../../components/libraries/strerror</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../integration/nrfx/legacy/nrf_drv_power.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>../../../modules/nrfx/drivers/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../integration/nrfx/legacy/nrf_drv_spi.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>../../../modules/nrfx/drivers/include</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../integration/nrfx/legacy/nrf_drv_uart.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>../../../modules/nrfx/drivers/include</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../modules/nrfx/drivers/src/nrfx_clock.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../modules/nrfx/drivers/src</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../../../modules/nrfx/drivers/include</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../../../components/libraries/strerror</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../modules/nrfx/drivers/src/nrfx_gpiote.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../modules/nrfx/drivers/src</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../../../modules/nrfx/drivers/include</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../../../components/libraries/strerror</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../modules/nrfx/drivers/src/nrfx_power.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../modules/nrfx/drivers/src</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>../../../modules/nrfx/drivers/include</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../modules/nrfx/drivers/src/nrfx_power_clock.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../modules/nrfx/drivers/src</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../modules/nrfx/drivers/include</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../modules/nrfx/drivers/src/nrfx_spi.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../modules/nrfx/drivers/src</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../modules/nrfx/drivers/src/nrfx_spim.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../modules/nrfx/drivers/src</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../../../modules/nrfx/drivers/include</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>../../../modules/nrfx/drivers/src/prs</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../../../components/libraries/strerror</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../modules/nrfx/drivers/src/nrfx_uart.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../modules/nrfx/drivers/src</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../../../modules/nrfx/drivers/include</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>../../../modules/nrfx/drivers/src/prs</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../../../components/libraries/strerror</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../modules/nrfx/drivers/src/nrfx_uarte.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../modules/nrfx/drivers/src</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../../../modules/nrfx/drivers/include</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>../../../modules/nrfx/drivers/src/prs</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../../../components/libraries/strerror</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../modules/nrfx/drivers/src/prs/nrfx_prs.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../adxl_logic-analyzer/main.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <folder path="0">
+        <cTool>
+          <incDir>
+            <pElem>../adxl_logic-analyzer</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/libraries/delay</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../modules/nrfx/drivers/include</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/queue</pElem>
+            <pElem>../../../components/libraries/atomic</pElem>
+            <pElem>../../../components/libraries/mutex</pElem>
+            <pElem>../../../components/libraries/timer</pElem>
+            <pElem>../../../components/libraries/serial</pElem>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../../../components/boards</pElem>
+            <pElem>../../../components/libraries/strerror</pElem>
+            <pElem>../../../components/libraries/experimental_memobj</pElem>
+            <pElem>../../../components/libraries/balloc</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/boards">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/boards</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/drivers_nrf">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/libraries/atomic">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/libraries/atomic</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/libraries/balloc">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/libraries/balloc</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../../../components/libraries/strerror</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/libraries/bsp">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/libraries/bsp</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/libraries/button</pElem>
+            <pElem>../../../components/libraries/timer</pElem>
+            <pElem>../../../components/boards</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/libraries/button">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/libraries/button</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>../../../components/libraries/timer</pElem>
+            <pElem>../../../modules/nrfx/drivers/include</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/libraries/experimental_memobj">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/libraries/experimental_memobj</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/balloc</pElem>
+            <pElem>../../../components/libraries/atomic</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/libraries/hardfault">
+        <cTool>
+          <incDir>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/libraries/hardfault/nrf52">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/libraries/hardfault/nrf52/handler</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/libraries/queue">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/libraries/queue</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../../../components/libraries/strerror</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/libraries/scheduler">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/libraries/scheduler</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/libraries/serial">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/libraries/serial</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>../../../components/libraries/mutex</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../modules/nrfx/drivers/include</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/queue</pElem>
+            <pElem>../../../components/libraries/atomic</pElem>
+            <pElem>../../../components/libraries/timer</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/libraries/strerror">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/libraries/strerror</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/libraries/timer">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/libraries/timer</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/delay</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/libraries/util">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/libraries/util</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/external/fprintf">
+        <cTool>
+          <incDir>
+            <pElem>../../../external/fprintf</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/external/segger_rtt">
+        <cTool>
+          <incDir>
+            <pElem>../../../external/segger_rtt</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/integration">
+        <cTool>
+          <incDir>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/modules/nrfx/drivers/src/prs">
+        <cTool>
+          <incDir>
+            <pElem>../../../modules/nrfx/drivers/src/prs</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/config</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../../../components/libraries/strerror</pElem>
+            <pElem>../adxl_logic-analyzer/pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+    </conf>
+  </confs>
+</configurationDescriptor>

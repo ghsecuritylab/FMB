@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <in>main.c</in>
+    </df>
+    <logicalFolder name="nRF5_SDK_15.0.0_a53641a"
+                   displayName="nRF5_SDK_15.0.0_a53641a"
+                   projectFiles="true"
+                   root="..">
+      <logicalFolder name="components" displayName="components" projectFiles="true">
+        <logicalFolder name="boards" displayName="boards" projectFiles="true">
+          <itemPath>../../../components/boards/boards.c</itemPath>
+          <itemPath>../../../components/boards/boards.h</itemPath>
+          <itemPath>../../../components/boards/pca10040.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="drivers_nrf" displayName="drivers_nrf" projectFiles="true">
+          <logicalFolder name="nrf_soc_nosd"
+                         displayName="nrf_soc_nosd"
+                         projectFiles="true">
+            <itemPath>../../../components/drivers_nrf/nrf_soc_nosd/nrf_error.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="libraries" displayName="libraries" projectFiles="true">
+          <logicalFolder name="balloc" displayName="balloc" projectFiles="true">
+            <itemPath>../../../components/libraries/balloc/nrf_balloc.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="delay" displayName="delay" projectFiles="true">
+            <itemPath>../../../components/libraries/delay/nrf_delay.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="experimental_log"
+                         displayName="experimental_log"
+                         projectFiles="true">
+            <logicalFolder name="src" displayName="src" projectFiles="true">
+              <itemPath>../../../components/libraries/experimental_log/src/nrf_log_ctrl_internal.h</itemPath>
+              <itemPath>../../../components/libraries/experimental_log/src/nrf_log_internal.h</itemPath>
+            </logicalFolder>
+            <itemPath>../../../components/libraries/experimental_log/nrf_log.h</itemPath>
+            <itemPath>../../../components/libraries/experimental_log/nrf_log_backend_interface.h</itemPath>
+            <itemPath>../../../components/libraries/experimental_log/nrf_log_ctrl.h</itemPath>
+            <itemPath>../../../components/libraries/experimental_log/nrf_log_instance.h</itemPath>
+            <itemPath>../../../components/libraries/experimental_log/nrf_log_types.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="experimental_memobj"
+                         displayName="experimental_memobj"
+                         projectFiles="true">
+            <itemPath>../../../components/libraries/experimental_memobj/nrf_memobj.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="experimental_section_vars"
+                         displayName="experimental_section_vars"
+                         projectFiles="true">
+            <itemPath>../../../components/libraries/experimental_section_vars/nrf_section.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="strerror" displayName="strerror" projectFiles="true">
+            <itemPath>../../../components/libraries/strerror/nrf_strerror.c</itemPath>
+            <itemPath>../../../components/libraries/strerror/nrf_strerror.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="util" displayName="util" projectFiles="true">
+            <itemPath>../../../components/libraries/util/app_error.c</itemPath>
+            <itemPath>../../../components/libraries/util/app_error.h</itemPath>
+            <itemPath>../../../components/libraries/util/app_error_handler_gcc.c</itemPath>
+            <itemPath>../../../components/libraries/util/app_error_weak.c</itemPath>
+            <itemPath>../../../components/libraries/util/app_error_weak.h</itemPath>
+            <itemPath>../../../components/libraries/util/app_util.h</itemPath>
+            <itemPath>../../../components/libraries/util/app_util_platform.c</itemPath>
+            <itemPath>../../../components/libraries/util/app_util_platform.h</itemPath>
+            <itemPath>../../../components/libraries/util/nordic_common.h</itemPath>
+            <itemPath>../../../components/libraries/util/nrf_assert.c</itemPath>
+            <itemPath>../../../components/libraries/util/nrf_assert.h</itemPath>
+            <itemPath>../../../components/libraries/util/sdk_common.h</itemPath>
+            <itemPath>../../../components/libraries/util/sdk_errors.h</itemPath>
+            <itemPath>../../../components/libraries/util/sdk_macros.h</itemPath>
+            <itemPath>../../../components/libraries/util/sdk_os.h</itemPath>
+            <itemPath>../../../components/libraries/util/sdk_resources.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="toolchain" displayName="toolchain" projectFiles="true">
+          <logicalFolder name="cmsis" displayName="cmsis" projectFiles="true">
+            <logicalFolder name="include" displayName="include" projectFiles="true">
+              <itemPath>../../../components/toolchain/cmsis/include/cmsis_gcc.h</itemPath>
+              <itemPath>../../../components/toolchain/cmsis/include/core_cm4.h</itemPath>
+              <itemPath>../../../components/toolchain/cmsis/include/core_cmFunc.h</itemPath>
+              <itemPath>../../../components/toolchain/cmsis/include/core_cmInstr.h</itemPath>
+              <itemPath>../../../components/toolchain/cmsis/include/core_cmSimd.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="integration" displayName="integration" projectFiles="true">
+        <logicalFolder name="nrfx" displayName="nrfx" projectFiles="true">
+          <logicalFolder name="legacy" displayName="legacy" projectFiles="true">
+            <itemPath>../../../integration/nrfx/legacy/apply_old_config.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../../integration/nrfx/nrfx_config.h</itemPath>
+          <itemPath>../../../integration/nrfx/nrfx_glue.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="modules" displayName="modules" projectFiles="true">
+        <logicalFolder name="nrfx" displayName="nrfx" projectFiles="true">
+          <logicalFolder name="drivers" displayName="drivers" projectFiles="true">
+            <itemPath>../../../modules/nrfx/drivers/nrfx_common.h</itemPath>
+            <itemPath>../../../modules/nrfx/drivers/nrfx_errors.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="hal" displayName="hal" projectFiles="true">
+            <itemPath>../../../modules/nrfx/hal/nrf_gpio.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="mdk" displayName="mdk" projectFiles="true">
+            <itemPath>../../../modules/nrfx/mdk/compiler_abstraction.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/nrf.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/nrf51_to_nrf52.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/nrf52.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/nrf52832_peripherals.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/nrf52_bitfields.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/nrf52_name_change.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/nrf_peripherals.h</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/system_nrf52.c</itemPath>
+            <itemPath>../../../modules/nrfx/mdk/system_nrf52.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="soc" displayName="soc" projectFiles="true">
+            <itemPath>../../../modules/nrfx/soc/nrfx_coredep.h</itemPath>
+            <itemPath>../../../modules/nrfx/soc/nrfx_irqs.h</itemPath>
+            <itemPath>../../../modules/nrfx/soc/nrfx_irqs_nrf52832.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../../modules/nrfx/nrfx.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>pca10040/blank/armgcc/Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>pca10040/blank/armgcc/Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-O3 -std=c99"/>
+      </flagsDictionary>
+      <codeAssistance>
+        <buildAnalyzer>false</buildAnalyzer>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>pca10040/blank/armgcc</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>pca10040/blank/armgcc</preBuildCommandWorkingDir>
+          <preBuildCommand>make</preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="../../../components/boards/boards.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/strerror/nrf_strerror.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/util/app_error.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/util/app_error_handler_gcc.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/util/app_error_weak.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/experimental_log</pElem>
+            <pElem>../../../components/libraries/experimental_log/src</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>pca10040/blank/config</pElem>
+            <pElem>../../../components/libraries/experimental_section_vars</pElem>
+            <pElem>../../../components/libraries/experimental_memobj</pElem>
+            <pElem>../../../components/libraries/balloc</pElem>
+            <pElem>../../../components/libraries/strerror</pElem>
+            <pElem>pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/util/app_util_platform.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../components/libraries/util/nrf_assert.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../modules/nrfx/mdk/system_nrf52.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <folder path="0">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/libraries/delay</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/boards</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>pca10040/blank/config</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/boards">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/boards</pElem>
+            <pElem>../../../modules/nrfx/hal</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../modules/nrfx</pElem>
+            <pElem>../../../integration/nrfx</pElem>
+            <pElem>pca10040/blank/config</pElem>
+            <pElem>../../../modules/nrfx/drivers</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>../../../integration/nrfx/legacy</pElem>
+            <pElem>../../../modules/nrfx/soc</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/libraries/strerror">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/libraries/strerror</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>../../../components/libraries/util</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>pca10040/blank/config</pElem>
+            <pElem>../../../components/drivers_nrf/nrf_soc_nosd</pElem>
+            <pElem>pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/components/libraries/util">
+        <cTool>
+          <incDir>
+            <pElem>../../../components/libraries/util</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="nRF5_SDK_15.0.0_a53641a/modules">
+        <cTool>
+          <incDir>
+            <pElem>../../../modules/nrfx/mdk</pElem>
+            <pElem>../../../components/toolchain/cmsis/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/include</pElem>
+            <pElem>/usr/local/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include</pElem>
+            <pElem>pca10040/blank/armgcc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <item path="main.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
